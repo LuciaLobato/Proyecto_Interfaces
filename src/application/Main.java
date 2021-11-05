@@ -8,35 +8,31 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-	TableView tableView = new TableView();
-
-	TableColumn<Persona, String> column1 = new TableColumn<>("Nombre");
-	column1.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-
-	TableColumn<Persona, String> column2 = new TableColumn<>("Telefono");
-	column2.setCellValueFactory(new PropertyValueFactory<>("telefono"));
-
-	tableView.getColumns().add(column1);
-	tableView.getColumns().add(column2);
-
-	tableView.getItems().add(new Persona());
-
-
-	VBox vbox = new VBox(tableView);
-
-	Scene scene = new Scene(vbox);
-
-	primaryStage.setScene(scene);
-	primaryStage.show();
+		try {
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
+			primaryStage.setTitle("Agenda de Contactos");
+			Scene scene = new Scene(root,655,494.0);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			
+			Persona Paco = new Persona();
+			Paco.setNombre("Paco");
+			Paco.setApellido("Gómez");
+			Paco.setCalle("Avenida de España");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
+	
 	public static void main(String[] args) {
-	launch(args);
+		launch(args);
 	}
 }
