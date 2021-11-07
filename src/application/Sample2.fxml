@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="441.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleController2">
+   <children>
+      <TextField fx:id="f1" layoutX="127.0" layoutY="38.0" promptText="Rosa" />
+      <TextField fx:id="f2" layoutX="127.0" layoutY="89.0" promptText="López" />
+      <TextField fx:id="f3" layoutX="127.0" layoutY="143.0" promptText="C/  avd. Plaza" />
+      <TextField fx:id="f4" layoutX="127.0" layoutY="194.0" promptText="Sevilla" />
+      <TextField fx:id="f5" layoutX="127.0" layoutY="247.0" promptText="aaaa/mm/dd" />
+      <TextField fx:id="f6" layoutX="128.0" layoutY="299.0" promptText="41520" />
+      <TextField fx:id="f7" layoutX="128.0" layoutY="351.0" promptText="684 759 483" />
+      <Text layoutX="30.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" wrappingWidth="76.53667831420898" />
+      <Text layoutX="30.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" wrappingWidth="76.53667831420898" />
+      <Text layoutX="30.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección:" wrappingWidth="76.53667831420898" />
+      <Text layoutX="18.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad/Municipio:" wrappingWidth="99.73662948608398" />
+      <Text layoutX="18.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de nacimiento:" textAlignment="CENTER" wrappingWidth="76.53667831420898" />
+      <Text layoutX="29.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Postal:" wrappingWidth="76.53667831420898" />
+      <Text layoutX="29.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono:" wrappingWidth="76.53667831420898" />
+      <Button fx:id="agregar2" layoutX="130.0" layoutY="402.0" mnemonicParsing="false" onAction="#add2" text="Añadir" />
+   </children>
+</AnchorPane>

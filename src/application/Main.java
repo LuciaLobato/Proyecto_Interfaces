@@ -1,12 +1,11 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.stage.Stage;
 import model.Persona;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
@@ -22,15 +21,17 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
-			Persona Paco = new Persona();
-			Paco.setNombre("Paco");
-			Paco.setApellido("Gómez");
-			Paco.setCalle("Avenida de España");
+			
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
+	ObservableList<Persona> personaData = FXCollections.observableArrayList();
+	public ObservableList<Persona> getPersonaData() {
+		return personaData;
+	}
+	
 	
 	public static void main(String[] args) {
 		launch(args);

@@ -8,20 +8,27 @@ public class Persona {
 	private String fechanacimiento;
 	private int codigopostal;
 	private int telefono;
+	
+		
 
-	public void Persona(){
+	public Persona(String nombre, String apellido, String calle, String ciudad, String fechanacimiento,
+			int codigopostal, int telefono) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.calle = calle;
+		this.ciudad = ciudad;
+		this.fechanacimiento = fechanacimiento;
+		this.codigopostal = codigopostal;
+		this.telefono = telefono;
 	}
 	public String getNombre() {
-	return nombre;
+		return nombre;
+	}
+	public Persona() {
+		
 	}
 	public void setNombre(String nombre) {
-	this.nombre = nombre;
-	}
-	public int getTelefono() {
-	return telefono;
-	}
-	public void setTelefono(int telefono) {
-	this.telefono = telefono;
+		this.nombre = nombre;
 	}
 	public String getApellido() {
 		return apellido;
@@ -53,11 +60,11 @@ public class Persona {
 	public void setCodigopostal(int codigopostal) {
 		this.codigopostal = codigopostal;
 	}
-	@Override
-	public String toString() {
-		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", calle=" + calle + ", ciudad=" + ciudad
-				+ ", fechanacimiento=" + fechanacimiento + ", codigopostal=" + codigopostal + ", telefono=" + telefono
-				+ "]";
+	public int getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
 	}
 	public void add() {
 		
