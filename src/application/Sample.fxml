@@ -15,7 +15,7 @@
    <center>
       <Pane prefHeight="494.0" prefWidth="655.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="lista" layoutY="27.0" onMouseClicked="#pulsar" prefHeight="468.0" prefWidth="264.0">
+            <TableView fx:id="lista" layoutY="27.0" prefHeight="468.0" prefWidth="264.0">
               <columns>
                 <TableColumn fx:id="nombre" prefWidth="128.0" text="Nombre" />
                 <TableColumn fx:id="apellidos" prefWidth="136.79998779296875" text="Apellidos" />
@@ -40,23 +40,16 @@
                 </Menu>
               </menus>
             </MenuBar>
+            <Text fx:id="txt" layoutX="298.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" wrappingWidth="223.7366943359375" />
+            <Text fx:id="txt2" layoutX="298.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" wrappingWidth="223.7366943359375" />
+            <Text fx:id="txt6" layoutX="298.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de Nacimiento:" wrappingWidth="223.7366943359375" />
+            <Text fx:id="txt3" layoutX="298.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Teléfono:" wrappingWidth="223.7366943359375" />
+            <Text fx:id="txt4" layoutX="298.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dierección:" wrappingWidth="223.7366943359375" />
+            <Text fx:id="txt5" layoutX="298.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad:" wrappingWidth="223.7366943359375" />
+            <Text fx:id="txt7" layoutX="298.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código Postal(C.P.):" wrappingWidth="223.7366943359375" />
             <Button layoutX="328.0" layoutY="428.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="52.0" text="Añadir" />
-            <Button layoutX="410.0" layoutY="428.0" mnemonicParsing="false" onAction="#change" prefHeight="25.0" prefWidth="52.0" text="Editar" />
+            <Button layoutX="410.0" layoutY="428.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="52.0" text="Editar" />
             <Button layoutX="496.0" layoutY="428.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="53.0" text="Borrar" />
-            <Text layoutX="309.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
-            <Text layoutX="308.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" />
-            <Text layoutX="307.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calle:" />
-            <Text layoutX="308.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad:" />
-            <Text layoutX="309.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de Nacimiento:" />
-            <Text layoutX="309.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código Postal:" />
-            <Text layoutX="311.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:" />
-            <TextField fx:id="t1" layoutX="484.0" layoutY="89.0" />
-            <TextField fx:id="t2" layoutX="484.0" layoutY="114.0" />
-            <TextField fx:id="t3" layoutX="484.0" layoutY="139.0" />
-            <TextField fx:id="t4" layoutX="484.0" layoutY="165.0" />
-            <TextField fx:id="t5" layoutX="484.0" layoutY="189.0" />
-            <TextField fx:id="t6" layoutX="484.0" layoutY="215.0" />
-            <TextField fx:id="t7" layoutX="484.0" layoutY="243.0" />
          </children>
       </Pane>
    </center>

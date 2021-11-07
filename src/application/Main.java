@@ -3,11 +3,11 @@ package application;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.stage.Stage;
-import model.Persona;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import model.Persona;
 
 
 public class Main extends Application {
@@ -20,9 +20,10 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			
-			
-			
+			Persona Paco = new Persona();
+			Paco.setNombre("Paco");
+			Paco.setApellido("Gómez");
+			Paco.setCalle("Avenida de España");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
