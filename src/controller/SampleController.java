@@ -1,6 +1,5 @@
 package controller;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,8 +14,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Labeled;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -29,10 +26,10 @@ public class SampleController implements Initializable{
 	
 	@FXML
     private TableView<Persona> lista;
-    @FXML
-    private TableColumn nombre;
-    @FXML
-    private TableColumn apellidos;
+	@FXML
+	TableColumn<Persona, String> nombre = new TableColumn<Persona, String>();
+	@FXML
+	TableColumn<Persona, String> apellidos = new TableColumn<Persona, String>();
 	@FXML
 	private Button anadir;
 	@FXML
@@ -53,57 +50,6 @@ public class SampleController implements Initializable{
 	private TextField t6;
 	@FXML
 	private TextField t7;
-=======
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.text.Text;
-import model.Persona;
-
-public class SampleController {
-	@FXML
-	private Button add;
-	@FXML
-	private Button edit;
-	@FXML
-	private Button remove;
-	@FXML
-	private Text txt;
-	@FXML
-	private Text txt2;
-	@FXML
-	private Text txt3;
-	@FXML
-	private Text txt4;
-	@FXML
-	private Text txt5;
-	@FXML
-	private Text txt6;
-	@FXML
-	private Text txt7;
-	@FXML
-	TableView list = new TableView();	
-	@FXML
-	TableColumn<Persona, String> nombre = new TableColumn();
-	@FXML
-	TableColumn<Persona, String> apellidos = new TableColumn();
-	public void initialize(URL url, ResourceBundle rb) {
-		nombre.setId("rghj");
-	}
-	@FXML
-	private void add(ActionEvent event) {
-	}
-	@FXML
-	private void edit(ActionEvent event) {
-	}
-	@FXML
-	private void delete(ActionEvent event) {
-	}
 	
 	private ObservableList<Persona> personas;
 	
@@ -114,8 +60,8 @@ public class SampleController {
 	public void initialize(URL url, ResourceBundle rb) {
 		personas =FXCollections.observableArrayList();
 		this.lista.setItems(personas);
-		this.nombre.setCellValueFactory(new PropertyValueFactory ("nombre"));
-		this.apellidos.setCellValueFactory(new PropertyValueFactory ("apellido"));
+		this.nombre.setCellValueFactory(new PropertyValueFactory<Persona, String> ("nombre"));
+		this.apellidos.setCellValueFactory(new PropertyValueFactory<Persona, String> ("apellido"));
 
 		Persona Paco = new Persona();
 		
