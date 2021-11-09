@@ -21,6 +21,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Persona;
@@ -40,19 +41,19 @@ public class SampleController implements Initializable{
 	@FXML
 	private Button borrar;
 	@FXML
-	private TextField t1;
+	private Label t1;
 	@FXML
-	private TextField t2;
+	private Label t2;
 	@FXML
-	private TextField t3;
+	private Label t3;
 	@FXML
-	private TextField t4;
+	private Label t4;
 	@FXML
-	private TextField t5;
+	private Label t5;
 	@FXML
-	private TextField t6;
+	private Label t6;
 	@FXML
-	private TextField t7;
+	private Label t7;
 	
 	private ObservableList<Persona> personas;
 	
@@ -194,12 +195,38 @@ public class SampleController implements Initializable{
 			}
 		}
 	}
+	
 	@FXML
-	public void pulsar(ActionEvent event) {
-		x = this.lista.getSelectionModel().getSelectedItem();
-			
-		//Esto me ha resultado imposible
-			
+	private void pulsar(MouseEvent event) {
+	Persona persona=(Persona) lista.getSelectionModel().getSelectedItem();
+	if(persona!=null) {
+	try {
+	t1.setText(persona.getNombre());
+	t2.setText(persona.getApellido());
+	t3.setText(persona.getCalle());
+	t4.setText(persona.getCiudad());
+	t6.setText(Integer.toString(persona.getCodigopostal()));
+	t5.setText(persona.getFechanacimiento());
+	t7.setText(Integer.toString(persona.getTelefono()));
+
+	}
+	catch(Exception e){
+	Alert alert= new Alert(Alert.AlertType.ERROR);
+	alert.setHeaderText(null);
+	alert.setTitle("Error");
+	alert.setContentText("Se ha producido un error");
+	alert.showAndWait();
+	}
+
+	}
+	else {
+	Alert alert= new Alert(Alert.AlertType.ERROR);
+	alert.setHeaderText(null);
+	alert.setTitle("Error");
+	alert.setContentText("Ninguna persona seleccionada");
+	alert.showAndWait();
+	}
+
 		
 	}
 }
