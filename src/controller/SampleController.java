@@ -119,6 +119,7 @@ public class SampleController implements Initializable{
 			Persona p = controlador.getPersona();
 			
 			this.personas.add(p);
+			this.personas.remove(p);
 			this.lista.refresh();
 			
 			
